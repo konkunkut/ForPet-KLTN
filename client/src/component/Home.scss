@@ -1,0 +1,14 @@
+.content-home{ 
+        background-image: url(../background-image1.jpg);
+    
+        // /* Center and scale the image nicely */
+        // background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        margin-top: 60px;
+
+        max-width: 4000px;
+        width: 100%;
+        height: auto;
+}
