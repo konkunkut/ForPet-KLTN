@@ -71,7 +71,6 @@ class CustommerPage extends React.Component {
         //     this.setState({isEditor : decoded.isEditor});
         // }
         if(decoded.isAdmin||decoded.isEditor){
-            console.log(decoded);
             this.setState({
                 permission: true
             })
@@ -79,7 +78,6 @@ class CustommerPage extends React.Component {
     }
 
     render() {
-        console.log(this.state.permission)
         return (
             <Content style={{ padding: '20px', marginTop: 60 }}>
                 {/* tạo cho đẹp */}

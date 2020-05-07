@@ -29,7 +29,6 @@ class NewAccount extends React.Component {
         };
 
         signUp(body).then((data) => {
-          console.log(data);
           if (!data.success)
           {
             message.error(data.message, 5);

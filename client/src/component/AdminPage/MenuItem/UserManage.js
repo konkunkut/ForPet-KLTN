@@ -50,17 +50,28 @@ class User_Management extends React.Component {
                 console.log(data.message)
             }
             else{
-                //console.log(data.data);
                 var tempdata=[];
                 for(let i=0; i < data.data.length; i++){
-                    tempdata.push({
-                        key: data.data[i]._id,
-                        index: i+1,
-                        email: data.data[i].local.email || data.data[i].google.email,
-                        firstname: data.data[i].fistname,
-                        lastname: data.data[i].lastname,
-                        tel:data.data[i].tel,
-                    })
+                    if(data.data[i].google){
+                        tempdata.push({
+                            key: data.data[i]._id,
+                            index: i+1,
+                            email: data.data[i].google.email,
+                            firstname: data.data[i].fistname,
+                            lastname: data.data[i].lastname,
+                            tel:data.data[i].tel,
+                        })
+                    }
+                    else{
+                        tempdata.push({
+                            key: data.data[i]._id,
+                            index: i+1,
+                            email: data.data[i].local.email,
+                            firstname: data.data[i].fistname,
+                            lastname: data.data[i].lastname,
+                            tel:data.data[i].tel,
+                        })
+                    }
                 };
                 //console.log(tempdata);
                 this.setState({
